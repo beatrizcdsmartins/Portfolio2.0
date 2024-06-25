@@ -123,6 +123,8 @@ header {
         }
     }
 
+   
+
 
     article {
         @include DisplayFlex(column, start, start);
@@ -132,14 +134,25 @@ header {
 
         .triangle{
             position: absolute;
-      
+            transition: transform 0.3s ease;
             bottom: -200px;
+
+            &:hover {
+                animation: afastar-esquerda 0.3s ease; /* Inicia a animação ao passar o mouse */
+                transform-origin: right; /* Define o ponto de origem da transformação */
+              }
         }
         
         .dark-triangle{
             position: absolute;
             bottom: -200px;
             left: -60px;
+
+            &:hover{
+                animation: afastar-direita 0.3s ease;
+                transform-origin: left;
+
+            }
         }
 
 
@@ -181,6 +194,8 @@ header {
         }
     }
 }
+
+
 
 .cta {
     margin: 0 20%;
@@ -300,6 +315,19 @@ header {
         display: flex;
         flex-direction: column;
         position: absolute;
+       
+        .yellow-triangle{
+            animation: mover 7s infinite;
+
+            &:hover {
+                animation: afastar-esquerda 0.3s ease; /* Inicia a animação ao passar o mouse */
+                transform-origin: right; /* Define o ponto de origem da transformação */
+              }
+
+              &:hover::before {
+                transform: translateX(-50px); /* Desloca o pseudo-elemento para a esquerda */
+              }
+        }
 
     }
 
@@ -345,6 +373,16 @@ header {
 
 .projects {
     padding: 0 20%;
+    @include DisplayFlex(column, center, center);
+
+    #see-more{
+        background-color: $yellow;
+        border: none;
+        color: $white;
+        padding: 10px;
+        border-radius: 7px;
+        cursor: pointer;
+    }
 
     .projects-container {
         @include DisplayFlex(column, center, center);
@@ -370,6 +408,29 @@ header {
         .wrap-projects {
             @include DisplayFlex(column, center, center);
             gap: 30px;
+
+            #hide-content{
+             
+                margin-top: -30px;
+                max-height: 0;
+                opacity: 0;
+                overflow: hidden;
+                transition: max-height 0.5s ease, opacity 0.5s ease;
+
+
+                .container-project{   
+                    margin-top: 30px;
+                    padding: 50px;
+                }   
+
+            }
+            #hide-content.show{
+                @include DisplayFlex(column, center, center);
+                width: 100vw;
+                max-height: 5000px; /* Ajuste conforme necessário para acomodar o conteúdo */
+
+                opacity: 1;
+            }
 
             .container-project {
                 position: relative;
@@ -569,6 +630,50 @@ footer {
     }
 
 }
+// ANIMATIONS
+
+
+@keyframes afastar-esquerda {
+    0% {
+      transform: translateX(0); /* Estado inicial: sem deslocamento */
+    }
+    100% {
+      transform: translateX(-40px); /* Desloca 20px para a esquerda */
+    }
+  }
+
+  @keyframes afastar-direita {
+    0% {
+      transform: translateX(0); /* Estado inicial: sem deslocamento */
+    }
+    100% {
+      transform: translateX(20px); /* Desloca 20px para a esquerda */
+    }
+  }
+
+  @keyframes mover {
+    0% {
+      left: 0;
+      top: 0;
+      transform: translate(0, 0);
+    }
+    25% {
+      left: 50px;
+      top: 0;
+      transform: translate(50px, 0);
+    }
+    50% {
+      left: calc(100% - 50px);
+      top: calc(100% - 50px);
+      transform: translate(0, 100px);
+    }
+   
+    100% {
+      left: 0;
+      top: 0;
+      transform: translate(0, 0);
+    }
+  }
 
 
 @media screen and (max-width:1017px) {
