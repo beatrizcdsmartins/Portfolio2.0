@@ -312,13 +312,14 @@
                     <h1>Contato</h1>
                 </div>
 
-                <form method="POST" onsubmit="sendForm(event)">
+                <form onsubmit="sendEmail(); reset(); return false;">
                     <input id="name" name="name" type="text" placeholder="Seu nome" required>
                     <input id="email" name="email" type="email" placeholder="Seu E-mail" required>
-                    <textarea id="message" name="message" cols="30" rows="10" placeholder="Sua mensagem :)" required></textarea>
+                    <textarea id="message" name="message" cols="30" rows="10" placeholder="Sua mensagem :)"
+                        required></textarea>
                     <input id="enviar-btn" type="submit" value="Enviar_">
                 </form>
-           
+
             </div>
             <div class="social-medias">
                 <div><a target="_blank" href="https://github.com/beatrizcdsmartins/"><img
@@ -358,22 +359,15 @@
 <script src="script.js"></script>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <script>
-    function sendForm(event) {
-        event.preventDefault(); // Impedir o envio padrão do formulário
-
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const message = document.getElementById("message").value;
-
+    function sendEmail() {
         Email.send({
-            SecureToken: "c4e28776-594a-41fd-b277-e768d42b1b31",
+            secureToken: "bc569d8a-ad79-4b68-9f26-719006bdbb8d",
             To: 'beatrizcdsmartins.contato@gmail.com',
-            From: email,
-            Subject: "Novo envio de " + name,
-            Body: `Nome: ${name}<br>Email: ${email}<br>Mensagem: ${message}`
+            From: document.getElementById("email").value,
+            Subject: "Chegou:",
+            Body: document.getElementById("name")
         }).then(
-            response => alert("Email enviado com sucesso!"),
-            error => alert("Falha no envio do email: " + error)
+            message => alert(message)
         );
     }
 </script>
