@@ -11,12 +11,9 @@
 
 .dark-mode:root {
   --white: #060A2F;
-  --red: #2f2f2f;
   --yellow: #ff9748;
-  --lightGray: #DFDEDD;
-  --gray: #423F3F;
+  --gray: #9f9f9f;
   --black: #FFFCF8;
-  --orange: #F77F00;
 }
 
 .cta.active::before {
@@ -53,6 +50,12 @@ a {
 button:hover,
 a:hover {
   transform: scale(1.1);
+}
+
+.linkedin, .github, .eye {
+  background-color: white;
+  padding: 7px;
+  border-radius: 10px;
 }
 
 .hamburguer,
@@ -146,6 +149,9 @@ header nav {
 header nav a {
   font-weight: 500;
 }
+header .switch {
+  cursor: pointer;
+}
 
 #home {
   position: relative;
@@ -181,6 +187,7 @@ header nav a {
   position: absolute;
   transition: transform 0.3s ease;
   bottom: -200px;
+  z-index: 4 !important;
   animation: spin 6s linear infinite;
 }
 #home article .triangle:hover {
@@ -190,6 +197,7 @@ header nav a {
   position: absolute;
   bottom: -200px;
   left: -60px;
+  z-index: 4;
   animation: spin-oposite 8s linear infinite;
 }
 #home article .dark-triangle:hover {
@@ -208,6 +216,9 @@ header nav a {
   position: absolute;
   left: 100%;
   z-index: -1;
+}
+#home article div a {
+  border: 0.5px solid white;
 }
 #home article p {
   margin-top: 10px;
@@ -323,7 +334,7 @@ header nav a {
 .about-me .container-about-me article button {
   border: none;
   background-color: var(--red);
-  color: var(--white);
+  color: white;
   margin-top: 30px;
 }
 .about-me .container-about-me article .gif {
@@ -564,6 +575,28 @@ header nav a {
   justify-content: center;
   align-items: center;
 }
+.contact .container-contact .popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--red);
+  border: 3px solid --yellow;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  animation: fadeOut 6s forwards;
+  color: var(--white);
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .contact .container-contact form {
   display: flex;
   flex-direction: column;
@@ -638,6 +671,7 @@ header nav a {
 .contact .container-contact .social-medias div a,
 .contact .container-contact .social-medias-mobile div a {
   padding: 15px;
+  background-color: white;
 }
 .contact .container-contact .social-medias div img,
 .contact .container-contact .social-medias-mobile div img {

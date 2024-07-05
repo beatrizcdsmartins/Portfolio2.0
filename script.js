@@ -29,6 +29,7 @@ const lamp = document.querySelector('.lamp');
 const containerLamp = document.querySelector('.cta');
 const textLamps = document.querySelectorAll('.txt-cta');
 const switches = document.querySelectorAll('.switch');
+const moonImage = document.getElementById('moonImage');
 
 // Função para alternar a lâmpada
 function toggleLamp() {
@@ -49,8 +50,17 @@ lamp.addEventListener('click', toggleLamp);
 switches.forEach(switchElement => {
     switchElement.addEventListener('click', function() {
         document.documentElement.classList.toggle('dark-mode');
-        toggleLamp(); // Chama a função para alternar a lâmpada
+        toggleLamp();
+        toggleMoonImage(); 
     });
 });
+
+function toggleMoonImage() {
+    if (document.documentElement.classList.contains('dark-mode')) {
+        moonImage.src = './assets/icons/light-moon.svg'; // Caminho para a imagem da lua branca
+    } else {
+        moonImage.src = './assets/icons/moon.svg'; // Caminho para a imagem da lua preta
+    }
+}
 
 

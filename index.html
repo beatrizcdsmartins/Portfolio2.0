@@ -32,7 +32,7 @@
             <a href="#contato">Contato</a>
         </nav>
         <div class="nav-info">
-            <img class="switch" src="./assets/icons/moon.svg" alt="moon-mood">
+            <img id="moonImage"  class="switch" src="./assets/icons/moon.svg" alt="moon-mood">
             <button class="language-btn">Pt-Br</button>
         </div>
     </header>
@@ -51,7 +51,7 @@
                     <a target="_blank" href="https://github.com/beatrizcdsmartins/">Github <img class="github"
                             src="./assets/icons/github.svg" alt="git-hub"></a>
                     <a target="_blank" href="https://www.linkedin.com/in/beatriz-cardoso-martins/">LinkedIn <img
-                            src="./assets/icons/linkedIn.svg" alt="linkedIn"></a>
+                            src="./assets/icons/linkedIn.svg" class="linkedin" alt="linkedIn"></a>
                     <img class="pipe" src="./assets/shapes/pipe.svg" alt="">
                 </div>
                 <img class="triangle" src="./assets/shapes/triangle.svg" alt="">
@@ -194,9 +194,9 @@
 
                         <div class="container-btn">
                             <a target="_blank" href="https://parehq.com.br/">Deploy <img
-                                    src="./assets/icons/deploy_eye.svg" alt="Deploy-project"></a>
+                                    src="./assets/icons/deploy_eye.svg" class="eye" alt="Deploy-project"></a>
                             <a target="_blank" href="https://github.com/beatrizcdsmartins/Pare-HQ">GitHub <img
-                                    src="./assets/icons/github.svg" alt="github"></a>
+                                    src="./assets/icons/github.svg" class="github" alt="github"></a>
                         </div>
                     </div>
                 </div>
@@ -213,9 +213,9 @@
 
                         <div class="container-btn">
                             <a target="_blank" href="https://genuine-hummingbird-b6ca95.netlify.app/">Deploy <img
-                                    src="./assets/icons/deploy_eye.svg" alt="Deploy-project"></a>
+                                    src="./assets/icons/deploy_eye.svg" class="eye" alt="Deploy-project"></a>
                             <a target="_blank" href="https://github.com/beatrizcdsmartins/hamburguer-react">GitHub <img
-                                    src="./assets/icons/github.svg" alt="github"></a>
+                                    src="./assets/icons/github.svg" class="github" alt="github"></a>
                         </div>
                     </div>
                 </div>
@@ -231,9 +231,9 @@
 
                         <div class="container-btn">
                             <a target="_blank" href="https://beatrizcdsmartins.github.io/The-colors-world/">Deploy <img
-                                    src="./assets/icons/deploy_eye.svg" alt="Deploy-project"></a>
+                                    src="./assets/icons/deploy_eye.svg" class="eye" alt="Deploy-project"></a>
                             <a target="_blank" href="https://github.com/beatrizcdsmartins/The-colors-world">GitHub <img
-                                    src="./assets/icons/github.svg" alt="github"></a>
+                                    src="./assets/icons/github.svg" class="github" alt="github"></a>
                         </div>
                     </div>
                     <img class="circle-shape" src="./assets/shapes/stroke_fat_circle.svg" alt="">
@@ -251,10 +251,10 @@
                             <div class="container-btn">
                                 <a target="_blank"
                                     href="https://beatrizcdsmartins.github.io/Conversor-de-Moedas/">Deploy
-                                    <img src="./assets/icons/deploy_eye.svg" alt="Deploy-project"></a>
+                                    <img src="./assets/icons/deploy_eye.svg" class="eye" alt="Deploy-project"></a>
                                 <a target="_blank"
                                     href="https://github.com/beatrizcdsmartins/Conversor-de-Moedas">GitHub
-                                    <img src="./assets/icons/github.svg" alt="github"></a>
+                                    <img src="./assets/icons/github.svg" class="github" alt="github"></a>
                             </div>
                         </div>
                     </div>
@@ -271,9 +271,9 @@
 
                             <div class="container-btn">
                                 <a target="_blank" href="https://beatrizcdsmartins.github.io/How-is-the-weather/">Deploy
-                                    <img src="./assets/icons/deploy_eye.svg" alt="Deploy-project"></a>
+                                    <img src="./assets/icons/deploy_eye.svg" class="eye" alt="Deploy-project"></a>
                                 <a target="_blank" href="https://github.com/beatrizcdsmartins/How-is-the-weather">GitHub
-                                    <img src="./assets/icons/github.svg" alt="github"></a>
+                                    <img src="./assets/icons/github.svg" class="github" alt="github"></a>
                             </div>
                         </div>
                     </div>
@@ -290,10 +290,10 @@
                             <div class="container-btn">
                                 <a target="_blank"
                                     href="https://beatrizcdsmartins.github.io/Light-Dark-Login-Theme/">Deploy <img
-                                        src="./assets/icons/deploy_eye.svg" alt="Deploy-project"></a>
+                                        src="./assets/icons/deploy_eye.svg" class="eye" alt="Deploy-project"></a>
                                 <a target="_blank"
                                     href="https://github.com/beatrizcdsmartins/Light-Dark-Login-Theme">GitHub <img
-                                        src="./assets/icons/github.svg" alt="github"></a>
+                                        src="./assets/icons/github.svg" class="github" alt="github"></a>
                             </div>
                         </div>
                     </div>
@@ -312,12 +312,17 @@
                     <h1>Contato</h1>
                 </div>
 
-                <form method="POST" onsubmit="sendForm(event)">
+                <form onsubmit="SendEmail(); return false;" method="post">
                     <input id="name" name="name" type="text" placeholder="Seu nome" required>
                     <input id="email" name="email" type="email" placeholder="Seu E-mail" required>
-                    <textarea id="message" name="message" cols="30" rows="10" placeholder="Sua mensagem :)" required></textarea>
+                    <textarea id="message" name="message" cols="30" rows="10" placeholder="Sua mensagem :)"
+                        required></textarea>
                     <input id="enviar-btn" type="submit" value="Enviar_">
                 </form>
+
+                <div id="popup" class="popup">
+                    Recebido ;)
+                </div>
 
             </div>
             <div class="social-medias">
@@ -354,29 +359,31 @@
 
 
 </body>
-
 <script src="script.js"></script>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <script>
-
-function sendForm(event) {
-    event.preventDefault(); // Impedir o envio padrão do formulário
-
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
-
-    Email.send({
-        SecureToken: "2fd17ec9-7d0e-44f3-b917-a748626b902c",
-        To: 'beatrizcdsmartins.contato@gmail.com',
-        From: email,
-        Subject: "Novo envio de " + name,
-        Body: `Nome: ${name}<br>Email: ${email}<br>Mensagem: ${message}`
-    }).then(
-        response => alert("Email enviado com sucesso!"),
-        error => alert("Falha no envio do email: " + error)
-    );
-}
+    function SendEmail() {
+        const name = document.getElementById("name").value
+        const email = document.getElementById("email").value
+        const message = document.getElementById("message").value
+        Email.send({
+            SecureToken: 'ed5407c6-f07c-41b1-ae76-fba516d813cf',
+            To: 'bm977753@gmail.com',
+            From: "bm977753@gmail.com",
+            Subject: "fORM PORTÓLIO✨⚠️:",
+            Body: `
+                Name: ${name} <br>
+                Email: ${email} <br>
+                Message: ${message}
+            `
+        }).then(() => {
+            const popup = document.getElementById('popup');
+            popup.style.display = 'block';
+            setTimeout(() => {
+                popup.style.display = 'none';
+            }, 2000);
+        });
+    }
 </script>
 
 </html>

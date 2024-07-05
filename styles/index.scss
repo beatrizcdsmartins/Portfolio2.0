@@ -10,13 +10,9 @@
 
 .dark-mode:root {
     --white: #060A2F;
-    --red: #2f2f2f;
     --yellow: #ff9748;
-    --lightGray: #DFDEDD;
-    --gray: #423F3F;
+    --gray: #9f9f9f;
     --black: #FFFCF8;
-    --orange: #F77F00;
-
 }
 
 .cta.active {
@@ -62,6 +58,12 @@ a {
     &:hover {
         transform: scale(1.1);
     }
+}
+
+.linkedin, .github, .eye{
+    background-color: white;
+    padding: 7px;
+    border-radius: 10px;
 }
 
 .hamburguer,
@@ -125,9 +127,9 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: var(--white); // A cor de fundo desejada
-        opacity: 0.9; // A opacidade desejada
-        z-index: -1; // Coloca o pseudo-elemento atrás do conteúdo do header
+        background-color: var(--white); 
+        opacity: 0.9; 
+        z-index: -1;
     }
 
 
@@ -146,7 +148,12 @@ header {
 
         a {
             font-weight: 500;
+            
         }
+    }
+
+    .switch{
+        cursor: pointer;
     }
 }
 
@@ -188,13 +195,11 @@ header {
             position: absolute;
             transition: transform 0.3s ease;
             bottom: -200px;
+            z-index: 4 !important;
             animation: spin 6s linear infinite;
 
             &:hover {
-                // animation: afastar-esquerda 0.3s ease;
-                // transform-origin: right;
                 animation-play-state: paused;
-
             }
         }
 
@@ -202,6 +207,7 @@ header {
             position: absolute;
             bottom: -200px;
             left: -60px;
+            z-index: 4;
 
             animation: spin-oposite 8s linear infinite;
 
@@ -231,6 +237,7 @@ header {
 
             a {
                 @extend .btn-component;
+                border: 0.5px solid white;
             }
         }
 
@@ -369,16 +376,14 @@ header {
             }
 
             p {
-                max-width: 500px;
-
-         
+                max-width: 500px;    
             }
 
             button {
                 @extend .btn-component;
                 border: none;
                 background-color: var(--red);
-                color: var(--white);
+                color: white;
                 margin-top: 30px;
             }
 
@@ -639,24 +644,37 @@ header {
         @include DisplayFlex(row, center, center);
         gap: 30px;
 
-        // #popup {
-        //     display: none;
-        //     position: fixed;
-        //     top: 50%;
-        //     left: 50%;
-        //     transform: translate(-50%, -50%);
-        //     background-color: #f8f8f8;
-        //     padding: 20px;
-        //     border: 1px solid #ccc;
-        //     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        //     z-index: 1000;
-        // }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: var(--red);
+            border: 3px solid --yellow;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            animation: fadeOut 6s forwards;
+            color: var(--white);
+        }
+    
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+    
         form {
 
             @include DisplayFlex(column, start, start);
             width: min(60vw, 400px);
             gap: 40px;
 
+            
             input,
             textarea {
                 width: 100%;
@@ -712,18 +730,22 @@ header {
             }
         }
 
+
         .social-medias,
         .social-medias-mobile {
             @include DisplayFlex(column, start, start);
             gap: 10px;
 
             div {
+              
                 @include DisplayFlex(row, center, center);
                 gap: 10px;
 
                 a {
                     @extend .language-btn;
                     padding: 15px;
+                    background-color: white;
+                   
                 }
 
                 img {
