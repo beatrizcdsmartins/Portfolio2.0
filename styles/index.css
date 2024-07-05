@@ -543,6 +543,13 @@ header nav a {
   text-align: end;
 }
 
+.contact {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 .contact .container-contact {
   z-index: 2;
   position: relative;
@@ -594,6 +601,7 @@ header nav a {
 .contact .container-contact form input[type=submit] {
   background-color: var(--yellow);
   width: min(50%, 130px);
+  cursor: pointer;
   color: var(--black);
   font-weight: 800;
   text-align: start;
