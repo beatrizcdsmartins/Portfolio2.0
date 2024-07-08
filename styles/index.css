@@ -792,7 +792,8 @@ footer .development {
     color: #060A2F;
   }
   .github, .eye {
-    padding: 0;
+    padding: 2px;
+    border-radius: 20px;
   }
   .social-medias-mobile div {
     margin-bottom: 10px;
