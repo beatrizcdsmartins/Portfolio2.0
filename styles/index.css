@@ -97,6 +97,7 @@ a:hover {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
   font-weight: 800;
   font-size: 20px;
+  border: 0.3px solid white;
 }
 
 body,
@@ -110,12 +111,13 @@ html {
 header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100%;
   padding: 20px 20%;
   position: fixed;
   z-index: 200;
+  gap: 10%;
   background-color: transparent;
 }
 header::before {
@@ -136,9 +138,6 @@ header div {
   align-items: center;
   gap: 15px;
 }
-header div img {
-  margin-top: 10px;
-}
 header nav {
   display: flex;
   flex-direction: row;
@@ -148,6 +147,12 @@ header nav {
 }
 header nav a {
   font-weight: 500;
+}
+header nav .container-lang {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 header .switch {
   cursor: pointer;
@@ -390,6 +395,10 @@ header .switch {
   gap: 10%;
   padding: 30px;
 }
+.stacks-section .container-stacks .stacks .github-stack {
+  background-color: white;
+  border-radius: 10px;
+}
 .stacks-section .container-stacks .stacks .block-stack {
   display: flex;
   flex-direction: column;
@@ -398,12 +407,22 @@ header .switch {
   z-index: 5;
   margin-top: 25px;
 }
+.stacks-section .container-stacks .stacks .block-stack img {
+  transition: transform 0.2s ease-in-out;
+}
+.stacks-section .container-stacks .stacks .block-stack img:hover {
+  transform: scale(1.3);
+}
 .stacks-section .container-stacks .stacks .block-stack span {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  transition: transform 0.3s ease-in-out;
   padding: 10px 20px;
   color: var(--gray);
   font-weight: 300;
   opacity: 0.7;
+}
+.stacks-section .container-stacks .stacks .block-stack span:hover {
+  transform: scale(1.3);
 }
 
 .projects {
@@ -641,6 +660,7 @@ header .switch {
   padding-left: 10px;
   font-size: 20px;
   border-radius: 5px;
+  padding-right: 110px;
 }
 .contact .container-contact .container-title {
   margin-bottom: 20px;
@@ -767,7 +787,13 @@ footer .development {
     transform: translateY(0);
   }
 }
-@media screen and (max-width: 1017px) {
+@media screen and (max-width: 1050px) {
+  nav a {
+    color: #060A2F;
+  }
+  .github, .eye {
+    padding: 0;
+  }
   .social-medias-mobile div {
     margin-bottom: 10px;
   }

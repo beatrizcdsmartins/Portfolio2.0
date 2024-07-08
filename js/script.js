@@ -1,4 +1,5 @@
 
+// BOTÃO VEJA MAIS - PROJETOS
 const ButtonSeeMore = document.getElementById('see-more')
 const hideDiv = document.getElementById('hide-content')
 
@@ -14,6 +15,7 @@ ButtonSeeMore.addEventListener('click', () => {
 });
 
 
+// MENU HAMBURGUER
 document.addEventListener('DOMContentLoaded', function () {
     const hamburguer = document.querySelector('.hamburguer');
     const navMenu = document.querySelector('.nav-menu');
@@ -21,17 +23,17 @@ document.addEventListener('DOMContentLoaded', function () {
     hamburguer.addEventListener('click', function () {
         navMenu.classList.toggle('active');
     });
-}); // menu-hamburguer
+});
 
 
-// Seletores
 const lamp = document.querySelector('.lamp');
 const containerLamp = document.querySelector('.cta');
 const textLamps = document.querySelectorAll('.txt-cta');
-const switches = document.querySelectorAll('.switch');
+const moon = document.querySelector('.switch');
 const moonImage = document.getElementById('moonImage');
 
-// Função para alternar a lâmpada
+
+//LAMPADA - CTA
 function toggleLamp() {
     containerLamp.classList.toggle('active');
     textLamps.forEach(textLamp => {
@@ -46,20 +48,20 @@ function toggleLamp() {
 }
 lamp.addEventListener('click', toggleLamp);
 
-// Evento de clique nos switches
-switches.forEach(switchElement => {
-    switchElement.addEventListener('click', function() {
+//DARK MODE
+moon.addEventListener('click', function() {
         document.documentElement.classList.toggle('dark-mode');
         toggleLamp();
         toggleMoonImage(); 
+ 
     });
-});
 
+// LUA - DARK/LIGHT MODE
 function toggleMoonImage() {
     if (document.documentElement.classList.contains('dark-mode')) {
-        moonImage.src = './assets/icons/light-moon.svg'; // Caminho para a imagem da lua branca
+        moonImage.src = './assets/icons/light-moon.svg'; 
     } else {
-        moonImage.src = './assets/icons/moon.svg'; // Caminho para a imagem da lua preta
+        moonImage.src = './assets/icons/moon.svg'; 
     }
 }
 

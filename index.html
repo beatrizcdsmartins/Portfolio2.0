@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,33 +7,35 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./styles/index.css">
     <title>Beatriz Martins</title>
 </head>
 
 <body>
     <div class="mobile-header">
-        <a href="#"><img width="90px" src="./assets/images/logo-bia.png" alt="Beatriz-Martins-Logo"></a>
+        <a href="#"><img width="90px" src="./assets/images/logo-bia.webp" class="" alt="Beatriz-Martins-Logo"></a>
         <img class="hamburguer" src="./assets/icons/hamburguer_menu.svg" alt="menu-hamburguer">
     </div>
 
     <header>
-        <a class="logo-desktop" href="#"><img width="90px" src="./assets/images/logo-bia.png"
+        <a class="logo-desktop" href="#"><img width="120px" src="./assets/images/logo-bia.webp"
                 alt="Beatriz-Martins-Logo"></a>
         <nav class="nav-menu">
-            <div class="info-mobile">
-                <img class="switch" src="./assets/icons/moon.svg" alt="moon-mood">
-                <button class="language-btn">Pt-Br</button>
-            </div>
             <a href="#home">Início</a>
             <a href="#sobre">Sobre</a>
             <a href="#projetos">Projetos</a>
             <a href="#contato">Contato</a>
+            <div class="container-lang">
+                <img id="moonImage" class="switch" src="./assets/icons/moon.svg" alt="moon-mood">
+                <div class="gtranslate_wrapper"></div>
+                <script>window.gtranslateSettings = {
+                        "default_language": "pt", "languages": ["pt", "en"],
+                        "wrapper_selector": ".gtranslate_wrapper", "alt_flags": { "en": "usa", "pt": "brazil" }
+                    }</script>
+                <script src="https://cdn.gtranslate.net/widgets/latest/flags.js" defer></script>
+            </div>
         </nav>
-        <div class="nav-info">
-            <img id="moonImage"  class="switch" src="./assets/icons/moon.svg" alt="moon-mood">
-            <button class="language-btn">Pt-Br</button>
-        </div>
     </header>
 
     <section id="home">
@@ -42,9 +43,8 @@
         </div>
         <div class="container-home">
             <article>
-
                 <span class="span-subtitle">Beatriz Martins</span>
-                <h1>Desenvolvedora <br> Front-End<span>.</span></h1>
+                <h1 data-aos="fade-left">Desenvolvedora <br> Front-End<span>.</span></h1>
                 <p>Café, Lofi, design, códigos, e apaixonada pelo que faz.</p>
 
                 <div>
@@ -52,19 +52,18 @@
                             src="./assets/icons/github.svg" alt="git-hub"></a>
                     <a target="_blank" href="https://www.linkedin.com/in/beatriz-cardoso-martins/">LinkedIn <img
                             src="./assets/icons/linkedIn.svg" class="linkedin" alt="linkedIn"></a>
-                    <img class="pipe" src="./assets/shapes/pipe.svg" alt="">
+                    <img class="pipe" src="./assets/shapes/pipe.svg" alt="gif-animation">
                 </div>
-                <img class="triangle" src="./assets/shapes/triangle.svg" alt="">
-                <img class="dark-triangle" src="./assets/shapes/dark_triangle.svg" alt="">
+                <img class="triangle" src="./assets/shapes/triangle.svg" alt="shapes">
+                <img class="dark-triangle" src="./assets/shapes/dark_triangle.svg" alt="shapes">
             </article>
 
-            <img class="image-home" width="500px" src="./assets/images/foto_home.png" alt="Beatriz Martins">
+            <img class="image-home" width="500px" src="./assets/images/foto_home.webp" alt="Beatriz Martins">
         </div>
 
     </section>
 
-    <section class="cta">
-
+    <section class="cta" data-aos="zoom-in">
         <img class="lamp" src="./assets/icons/light_lamp.svg" alt="lamp">
         <div class="main-container">
             <h1>Tem algum<br>
@@ -82,9 +81,9 @@
         </div>
     </section>
 
-    <section id="sobre" class="about-me">
+    <section id="sobre" class="about-me" data-aos="fade-left">
         <div class="container-about-me">
-            <img class="image-about-me" width="500px" src="./assets/images/quem-sou-imagem.png" alt="eu">
+            <img class="image-about-me" width="500px" src="./assets/images/quem-sou-imagem.webp" alt="eu">
             <article>
                 <span>Olá,</span>
                 <h1>Um pouco sobre mim</h1>
@@ -95,8 +94,7 @@
                     hoje sou apaixonada pelo que faço.❤️
                     <br><br>
                     Me formei em Análise e Desenvolvimento de Sistemas em 2024 e, paralelamente, fiz uma formação em
-                    desenvolvimento full stack, onde aprendi algumas das tecnologias mais relevantes do mercado, o que
-                    alavancou minha carreira. <br>
+                    desenvolvimento full stack, onde aprendi algumas das tecnologias mais relevantes do mercado. <br>
                     Nela desenvolvi habilidades para criação de sites bem construídos, landing pages otimizadas, design
                     e animações.🎨
                     <br>Estou ansiosa para os próximos projetos e que venham muitos desafios pela frente!🚀
@@ -105,7 +103,7 @@
                 </p>
 
                 <button>Dowload CV <img src="./assets/icons/dowload.svg" alt="dowload-cv-botão"></button>
-                <img class="gif" src="./assets/shapes/stairs_dot_animate.gif" alt="">
+                <img class="gif" src="./assets/shapes/stairs_dot_animate.gif" alt="animações">
             </article>
         </div>
 
@@ -113,13 +111,13 @@
 
     <section class="stacks-section">
         <div class="container-shapes">
-            <img style="width: 100px;" class="dark-triangle" src="./assets/shapes/dark_triangle.svg" alt="">
-            <img style="width: 200px;" class="triangle" src="./assets/shapes/triangle.svg" alt="">
-            <img style="width: 100px;" class="yellow-triangle" src="./assets/shapes/yellow-triangle.svg" alt="">
+            <img style="width: 100px;" class="dark-triangle" src="./assets/shapes/dark_triangle.svg" alt="circle-shape">
+            <img style="width: 200px;" class="triangle" src="./assets/shapes/triangle.svg" alt="triangle">
+            <img style="width: 100px;" class="yellow-triangle" src="./assets/shapes/yellow-triangle.svg" alt="triangle">
         </div>
 
 
-        <div class="container-stacks">
+        <div class="container-stacks" data-aos="fade-right">
             <h1>Tecnologias</h1>
             <div class="stacks">
                 <div class="block-stack">
@@ -127,51 +125,51 @@
                     <span>HTML5</span>
                 </div>
                 <div class="block-stack">
-                    <img src="./assets/stacks/css.svg" alt="html">
+                    <img src="./assets/stacks/css.svg" alt="css">
                     <span>CSS3</span>
                 </div>
                 <div class="block-stack">
-                    <img src="./assets/stacks/js.svg" alt="html">
+                    <img src="./assets/stacks/js.svg" alt="js">
                     <span>JAVASCRIPT</span>
                 </div>
                 <div class="block-stack">
-                    <img src="./assets/stacks/react.svg" alt="html">
+                    <img src="./assets/stacks/react.svg" alt="react">
                     <span>REACT</span>
                 </div>
                 <div class="block-stack">
-                    <img src="./assets/stacks/tailwind.svg" alt="html">
+                    <img src="./assets/stacks/tailwind.svg" alt="tailwind">
                     <span>TAILWIND</span>
                 </div>
                 <div class="block-stack">
-                    <img src="./assets/stacks/wordpress.svg" alt="html">
+                    <img src="./assets/stacks/wordpress.svg" alt="wordpress">
                     <span>WORDPRESS</span>
                 </div>
                 <div class="block-stack">
-                    <img src="./assets/stacks/node.svg" alt="html">
+                    <img src="./assets/stacks/node.svg" alt="node">
                     <span>NODE</span>
                 </div>
                 <div class="block-stack">
-                    <img src="./assets/stacks/figma.svg" alt="html">
+                    <img src="./assets/stacks/figma.svg" alt="figma">
                     <span>FIGMA</span>
                 </div>
                 <div class="block-stack">
-                    <img src="./assets/stacks/adobeXd.svg" alt="html">
+                    <img src="./assets/stacks/adobeXd.svg" alt="adobeXd">
                     <span>ADOBE XD</span>
                 </div>
                 <div class="block-stack">
-                    <img src="./assets/stacks/ps.svg" alt="html">
+                    <img src="./assets/stacks/ps.svg" alt="PHOTOSHOP">
                     <span>PHOTOSHOP</span>
                 </div>
                 <div class="block-stack">
-                    <img src="./assets/stacks/git.svg" alt="html">
+                    <img src="./assets/stacks/git.svg" alt="git">
                     <span>GIT</span>
                 </div>
                 <div class="block-stack">
-                    <img src="./assets/stacks/github.svg" alt="html">
+                    <img src="./assets/stacks/github.svg" class="github-stack" alt="github">
                     <span>GITHUB</span>
                 </div>
             </div>
-            <img class="stacks-gif" src="./assets/shapes/gif_stacks.gif" alt="">
+            <img class="stacks-gif" src="./assets/shapes/gif_stacks.gif" alt="escada gif">
         </div>
     </section>
 
@@ -183,9 +181,11 @@
             </div>
 
             <div class="wrap-projects">
-                <div class="container-project">
+                <div class="container-project" data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine">
                     <img class="dots-shape" src="./assets/shapes/square_dots.svg" alt="">
-                    <img class="mockup" width="500px" src="./assets/images/mockups/pareHq_mockup.png" alt="">
+                    <img class="mockup" width="500px" src="./assets/images/mockups/pareHq_mockup.webp" alt="landing page image">
                     <div>
                         <p>Desenvolvi uma landing page utilizando <b>HTML, CSS e JavaScript</b>
                             para um trabalho de conscientização de trânsito do meu pai. A página
@@ -201,8 +201,8 @@
                     </div>
                 </div>
 
-                <div class="container-project  inverse-container-project">
-                    <img class="mockup" width="500px" src="./assets/images/mockups/react_hamburguer_mockup.png" alt="">
+                <div class="container-project  inverse-container-project" data-aos="zoom-in">
+                    <img class="mockup" width="500px" src="./assets/images/mockups/react_hamburguer_mockup.webp" alt="project react image">
                     <div>
                         <p>Este projeto, desenvolvido com <b>React</b>, permite que
                             o usuário digite seu nome e faça um pedido de hambúrguer.
@@ -220,9 +220,9 @@
                     </div>
                 </div>
 
-                <div class="container-project">
-                    <img class="triangle-shape" src="./assets/shapes/yellow-triangle.svg" alt="">
-                    <img class="mockup" width="500px" src="./assets/images/mockups/colors_ockup.png" alt="">
+                <div class="container-project" data-aos="fade-left">
+                    <img class="triangle-shape" src="./assets/shapes/yellow-triangle.svg" alt="triangle">
+                    <img class="mockup" width="500px" src="./assets/images/mockups/colors_ockup.webp" alt="mockup">
                     <div>
                         <p>Utilizando <b>HTML, CSS e JavaScript</b>, criei um artigo sobre o fascinante mundo
                             das cores. A página é visualmente rica e interativa, proporcionando uma
@@ -240,8 +240,8 @@
                 </div>
 
                 <div id="hide-content">
-                    <div class="container-project  inverse-container-project">
-                        <img class="mockup" width="500px" src="./assets/images/mockups/conversor_Mockup.png" alt="">
+                    <div class="container-project  inverse-container-project" data-aos="fade-right">
+                        <img class="mockup" width="500px" src="./assets/images/mockups/conversor_Mockup.webp" alt="mockup">
                         <div>
                             <p>Este projeto foi desenvolvido com <b>HTML, CSS e JavaScript</b>, e consome
                                 uma <b>API</b> que fornece os valores atualizados do euro, bitcoin e dólar.
@@ -259,9 +259,9 @@
                         </div>
                     </div>
 
-                    <div class="container-project">
-                        <img class="circles-shape" src="./assets/shapes/yellow-circle.svg" alt="">
-                        <img class="mockup" width="500px" src="./assets/images/mockups/weather_mockup.png" alt="">
+                    <div class="container-project" data-aos="fade-right">
+                        <img class="circles-shape" src="./assets/shapes/yellow-circle.svg" alt="shapes">
+                        <img class="mockup" width="500px" src="./assets/images/mockups/weather_mockup.webp" alt="mockup">
                         <div>
                             <p>Utilizando <b>HTML, CSS e JavaScript</b>, criei uma aplicação
                                 que consulta uma <b>API</b> para obter o clima em tempo real de qualquer
@@ -278,9 +278,9 @@
                         </div>
                     </div>
 
-                    <div class="container-project  inverse-container-project">
-                        <img class="zig-zag-shape" src="./assets/shapes/zig_zag.png" alt="">
-                        <img class="mockup" width="500px" src="./assets/images/mockups/login_mockup.png" alt="">
+                    <div class="container-project  inverse-container-project" data-aos="fade-right">
+                        <img class="zig-zag-shape" src="./assets/shapes/zig_zag.png" alt="shapes">
+                        <img class="mockup" width="500px" src="./assets/images/mockups/login_mockup.webp" alt="mockup">
                         <div>
                             <p>Este projeto, desenvolvido com <b>HTML, CSS e JavaScript</b>,
                                 foi criado para praticar animações e funcionalidades interativas, apresentando uma
@@ -307,7 +307,7 @@
     <section id="contato" class="contact">
         <div class="container-contact">
             <div>
-                <div class="container-title">
+                <div class="container-title"  data-aos="fade-right">
                     <span>Entre em</span>
                     <h1>Contato</h1>
                 </div>
@@ -325,29 +325,29 @@
                 </div>
 
             </div>
-            <div class="social-medias">
-                <div><a target="_blank" href="https://github.com/beatrizcdsmartins/"><img
-                            src="./assets/icons/github.svg" alt=""></a>
+            <div class="social-medias" >
+                <div  data-aos="fade-right"><a target="_blank" href="https://github.com/beatrizcdsmartins/"><img
+                            src="./assets/icons/github.svg" alt="github"></a>
                     <p>/beatrizcdsmartins</p>
                 </div>
-                <div><a target="_blank" href="https://www.linkedin.com/in/beatriz-cardoso-martins/"><img
-                            src="./assets/icons/linkedIn.svg" alt=""></a>
+                <div  data-aos="fade-right"><a target="_blank" href="https://www.linkedin.com/in/beatriz-cardoso-martins/"><img
+                            src="./assets/icons/linkedIn.svg" alt="linkedIn"></a>
                     <p>/beatriz-cardoso-martins</p>
                 </div>
-                <div><a target="_blank" href="mailto:beatrizcdsmartins.contato@gmail.com"><img
-                            src="./assets/icons/e-mail.svg" alt=""></a>
+                <div  data-aos="fade-right"><a target="_blank" href="mailto:beatrizcdsmartins.contato@gmail.com"><img
+                            src="./assets/icons/e-mail.svg" alt="email"></a>
                     <p>beatrizcdsmartins.contato@gmail.com</p>
                 </div>
             </div>
 
 
             <div class="social-medias-mobile">
-                <div><a href="https://github.com/beatrizcdsmartins/"><img src="./assets/icons/github.svg" alt=""></a>
+                <div><a href="https://github.com/beatrizcdsmartins/"><img src="./assets/icons/github.svg" alt="github"></a>
                 </div>
                 <div><a href="https://www.linkedin.com/in/beatriz-cardoso-martins/"><img
-                            src="./assets/icons/linkedIn.svg" alt=""></a></div>
+                            src="./assets/icons/linkedIn.svg" alt="linkedIn"></a></div>
                 <div><a href="mailto:beatrizcdsmartins.contato@gmail.com"><img src="./assets/icons/e-mail.svg"
-                            alt=""></a></div>
+                            alt="email"></a></div>
             </div>
     </section>
 
@@ -357,33 +357,13 @@
         <p>© 2024 | Beatriz Martins | todos os direitos reservados</p>
     </footer>
 
-
 </body>
-<script src="script.js"></script>
-<script src="https://smtpjs.com/v3/smtp.js"></script>
-<script>
-    function SendEmail() {
-        const name = document.getElementById("name").value
-        const email = document.getElementById("email").value
-        const message = document.getElementById("message").value
-        Email.send({
-            SecureToken: 'ed5407c6-f07c-41b1-ae76-fba516d813cf',
-            To: 'bm977753@gmail.com',
-            From: "bm977753@gmail.com",
-            Subject: "fORM PORTÓLIO✨⚠️:",
-            Body: `
-                Name: ${name} <br>
-                Email: ${email} <br>
-                Message: ${message}
-            `
-        }).then(() => {
-            const popup = document.getElementById('popup');
-            popup.style.display = 'block';
-            setTimeout(() => {
-                popup.style.display = 'none';
-            }, 2000);
-        });
-    }
-</script>
 
+<script src="./js/script.js"></script>
+<script src="./js/sendEmail.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
 </html>
