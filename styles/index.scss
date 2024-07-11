@@ -16,7 +16,7 @@
 }
 
 .cta.active {
-    &::before{
+    &::before {
         background-color: #060A2F;
         opacity: 1;
     }
@@ -60,7 +60,9 @@ a {
     }
 }
 
-.linkedin, .github, .eye{
+.linkedin,
+.github,
+.eye {
     background-color: white;
     padding: 7px;
     border-radius: 10px;
@@ -129,8 +131,8 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: var(--white); 
-        opacity: 0.9; 
+        background-color: var(--white);
+        opacity: 0.9;
         z-index: -1;
     }
 
@@ -148,12 +150,12 @@ header {
             font-weight: 500;
         }
 
-        .container-lang{
+        .container-lang {
             @include DisplayFlex(row, center, center);
         }
     }
 
-    .switch{
+    .switch {
         cursor: pointer;
 
     }
@@ -276,8 +278,8 @@ header {
     padding: 20px 0;
     margin-top: -50px;
     position: relative;
-    z-index: 2; 
-    
+    z-index: 2;
+
 
     &::before {
         content: '';
@@ -286,9 +288,9 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: var(--yellow); 
-        opacity: 0.5; 
-        z-index: -1; 
+        background-color: var(--yellow);
+        opacity: 0.5;
+        z-index: -1;
         border-radius: 10px;
     }
 
@@ -298,7 +300,7 @@ header {
         padding-left: 10px;
         transition: transform 0.1s ease-in-out;
 
-        &:hover{
+        &:hover {
             animation: shake-animation 1.5s ease-in-out;
         }
 
@@ -318,24 +320,24 @@ header {
             text-align: end;
             font-size: clamp(1em, 1em + 1.5vw, 2.5em);
             color: var(--yellow);
-    
+
+        }
+
     }
-         
-        }
 
-        p {
-            max-width: 500px;
-        }
-
-        div {
-            @include DisplayFlex(column, center, start);
-            gap: 20px;
-        }
-
-        a {
-            @extend .btn-component;
-        }
+    p {
+        max-width: 500px;
     }
+
+    div {
+        @include DisplayFlex(column, center, start);
+        gap: 20px;
+    }
+
+    a {
+        @extend .btn-component;
+    }
+}
 
 
 .about-me {
@@ -378,7 +380,7 @@ header {
             }
 
             p {
-                max-width: 500px;    
+                max-width: 500px;
             }
 
             button {
@@ -416,18 +418,18 @@ header {
 
         .yellow-triangle {
             animation: mover 7s infinite;
-            
+
 
             &:hover {
-               animation-play-state: paused;
+                animation-play-state: paused;
             }
         }
 
-        .triangle{
+        .triangle {
             animation: spin 30s infinite;
         }
 
-        .dark-triangle{
+        .dark-triangle {
             animation: spin-oposite 20s infinite;
         }
 
@@ -455,20 +457,22 @@ header {
             gap: 10%;
             padding: 30px;
 
-            .github-stack{
+            .github-stack {
                 background-color: white;
                 border-radius: 10px;
 
             }
+
             .block-stack {
                 @include DisplayFlex(column, center, center);
 
                 z-index: 5;
                 margin-top: 25px;
 
-                img{
+                img {
                     transition: transform 0.2s ease-in-out;
-                    &:hover{
+
+                    &:hover {
                         transform: scale(1.3);
                     }
                 }
@@ -481,7 +485,7 @@ header {
                     font-weight: 300;
                     opacity: 0.7;
 
-                    &:hover{
+                    &:hover {
                         transform: scale(1.3);
                     }
 
@@ -490,7 +494,6 @@ header {
         }
     }
 }
-
 
 .projects {
     padding: 0 20%;
@@ -529,6 +532,7 @@ header {
         .wrap-projects {
             @include DisplayFlex(column, center, center);
             gap: 30px;
+
 
             #hide-content {
 
@@ -586,7 +590,7 @@ header {
                     margin-top: -30px;
                     margin-right: -40px;
                     animation: spin-oposite 10s linear infinite;
-               
+
 
                 }
 
@@ -596,7 +600,7 @@ header {
                     top: 0;
                     right: 0;
                     width: 250px;
-                    
+
                 }
 
                 .circles-shape {
@@ -656,6 +660,7 @@ header {
 .contact {
     position: relative;
     @include DisplayFlex(row, center, center);
+
     .container-contact {
         z-index: 2;
         position: relative;
@@ -677,23 +682,24 @@ header {
             animation: fadeOut 6s forwards;
             color: var(--white);
         }
-    
+
         @keyframes fadeOut {
             0% {
                 opacity: 1;
             }
+
             100% {
                 opacity: 0;
             }
         }
-    
+
         form {
 
             @include DisplayFlex(column, start, start);
             width: min(60vw, 400px);
             gap: 40px;
 
-            
+
             input,
             textarea {
                 width: 100%;
@@ -757,7 +763,7 @@ header {
             gap: 10px;
 
             div {
-              
+
                 @include DisplayFlex(row, center, center);
                 gap: 10px;
 
@@ -765,7 +771,7 @@ header {
                     @extend .language-btn;
                     padding: 15px;
                     background-color: white;
-                   
+
                 }
 
                 img {
@@ -795,10 +801,28 @@ footer {
 // ANIMAÇÕES
 
 @keyframes shake-animation {
-    0%, 100% { transform: translateX(0); }
-    10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
-    20%, 40%, 60%, 80% { transform: translateX(10px); }
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-10px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(10px);
+    }
 }
+
 @keyframes spin {
     from {
         transform: rotate(0deg);
@@ -866,7 +890,7 @@ footer {
         transform: translate(0, 0);
     }
 }
- 
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -880,13 +904,14 @@ footer {
 }
 
 @media screen and (max-width:1050px) {
-    nav { 
+    nav {
         a {
             color: #060A2F;
         }
     }
 
-    .github, .eye{
+    .github,
+    .eye {
         padding: 2px;
         border-radius: 20px;
     }
@@ -968,10 +993,10 @@ footer {
         }
 
         .lamp {
-         
+
             margin-right: 0px !important;
             cursor: pointer;
-       
+
 
         }
 
@@ -1053,7 +1078,7 @@ footer {
     }
 
     .nav-info {
-       display: none;
+        display: none;
     }
 
     .nav-info.active {

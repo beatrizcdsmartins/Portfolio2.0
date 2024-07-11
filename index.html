@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,7 @@
     <link rel="icon" href="./assets/icons/icon.svg" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./styles/index.css">
     <title>Beatriz Martins</title>
 </head>
@@ -103,7 +104,8 @@
                     Tem algum projeto em mente? Bora trabalhar juntos!✨
                 </p>
 
-                <button>Dowload CV <img src="./assets/icons/dowload.svg" alt="dowload-cv-botão"></button>
+                <a href="./assets/CV/Curriculo - Beatriz Cardoso Martins.pdf"><button>Dowload CV <img
+                            src="./assets/icons/dowload.svg" alt="dowload-cv-botão"></button></a>
                 <img class="gif" src="./assets/shapes/stairs_dot_animate.gif" alt="animações">
             </article>
         </div>
@@ -140,6 +142,10 @@
                 <div class="block-stack">
                     <img src="./assets/stacks/tailwind.svg" alt="tailwind">
                     <span>TAILWIND</span>
+                </div>
+                <div class="block-stack">
+                    <img width="50px" src="./assets/stacks/styledComponents.png" alt="styled components">
+                    <span>STYLED COMPONENTS</span>
                 </div>
                 <div class="block-stack">
                     <img src="./assets/stacks/wordpress.svg" alt="wordpress">
@@ -181,16 +187,43 @@
                 <h1>Projetos</h1>
             </div>
 
+
             <div class="wrap-projects">
-                <div class="container-project" data-aos="fade-right"
-                data-aos-offset="300"
-                data-aos-easing="ease-in-sine">
+
+                <div class="container-project  inverse-container-project" data-aos="zoom-in">
+                    <img class="mockup" width="500px" src="./assets/images/mockups/IceCreamMockup.webp"
+                        alt="project react image">
+                    <div>
+                        <p>Sorveteria desenvolvida do completo zero. Tela de Cadastro e login para o usuário poder
+                            acessar o site. Também tem as telas exclusivas para o Administrador, onde ele consegue
+                            adicionar os sorvetes,
+                            escolher a categoria, e editar os produtos.
+                            Foi desenvolvido em <b>React</b> e no back end <b>Express.js,</b> <b>MongoDB (Mongoose)</b> e
+                            <b>PostgreSQL (Sequelize)</b>. 
+                            Implementação de <b>autenticação JWT, segurança com bcrypt e validações com Yup</b>.
+                            Utilização de <b>ESLint, Prettier e Nodemon</b> para garantir um código limpo e eficiente.</b>
+                        </p>
+
+                        <div class="container-btn first-project">
+                            <a target="_blank" href="https://ice-cream-interface.vercel.app/">Deploy <img
+                                    src="./assets/icons/deploy_eye.svg" class="eye" alt="Deploy-project"></a>
+                            <a target="_blank" href="https://github.com/beatrizcdsmartins/ice-cream_front-end">GitHub
+                                <img src="./assets/icons/github.svg" class="github" alt="github"></a>
+                
+                        </div>
+                    </div>
+                </div>
+                <div class="container-project" data-aos="fade-right" data-aos-offset="300"
+                    data-aos-easing="ease-in-sine">
                     <img class="dots-shape" src="./assets/shapes/square_dots.svg" alt="">
-                    <img class="mockup" width="500px" src="./assets/images/mockups/pareHq_mockup.webp" alt="landing page image">
+                    <img class="mockup" width="500px" src="./assets/images/mockups/pareHq_mockup.webp"
+                        alt="landing page image">
                     <div>
                         <p>Desenvolvi uma landing page utilizando <b>HTML, CSS e JavaScript</b>
                             para uma HQ de conscientização de trânsito do meu pai. A página
-                            tem um design atraente e informativo, destacando a importância e relevância do seu trabalho.</p>
+                            tem um design atraente e informativo, destacando a importância e relevância do seu trabalho.
+                            Design desenvolvido no <b>Figma</b>.
+                        </p>
 
                         <div class="container-btn">
                             <a target="_blank" href="https://parehq.com.br/">Deploy <img
@@ -202,7 +235,8 @@
                 </div>
 
                 <div class="container-project  inverse-container-project" data-aos="zoom-in">
-                    <img class="mockup" width="500px" src="./assets/images/mockups/react_hamburguer_mockup.webp" alt="project react image">
+                    <img class="mockup" width="500px" src="./assets/images/mockups/react_hamburguer_mockup.webp"
+                        alt="project react image">
                     <div>
                         <p>Este projeto permite que
                             o usuário digite seu nome e faça um pedido de hambúrguer.
@@ -210,7 +244,7 @@
                             pode visualizar todos os pedidos realizados. A aplicação possui
                             uma interface intuitiva
                             e eficiente, facilitando a navegação e a interação do usuário.
-                        Foi desenvolvido com <b>React, Styled Components e Node.js.</b>
+                            Foi desenvolvido com <b>React, Styled Components e Node.js.</b>
                         </p>
 
                         <div class="container-btn">
@@ -243,11 +277,14 @@
 
                 <div id="hide-content">
                     <div class="container-project  inverse-container-project" data-aos="fade-right">
-                        <img class="mockup" width="500px" src="./assets/images/mockups/conversor_Mockup.webp" alt="mockup">
+                        <img class="mockup" width="500px" src="./assets/images/mockups/conversor_Mockup.webp"
+                            alt="mockup">
                         <div>
-                            <p>Este projeto consome uma <b>API</b> que fornece os valores atualizados do euro, bitcoin e dólar.
+                            <p>Este projeto consome uma <b>API</b> que fornece os valores atualizados do euro, bitcoin e
+                                dólar.
                                 O conversor de moedas é prático e fácil de usar, permitindo que os usuários
-                                obtenham rapidamente as cotações mais recentes das moedas. Desenvolvido com <b>HTML, CSS e JavaScript</b>.</p>
+                                obtenham rapidamente as cotações mais recentes das moedas. Desenvolvido com <b>HTML, CSS
+                                    e JavaScript</b>.</p>
 
                             <div class="container-btn">
                                 <a target="_blank"
@@ -262,12 +299,14 @@
 
                     <div class="container-project" data-aos="fade-right">
                         <img class="circles-shape" src="./assets/shapes/yellow-circle.svg" alt="shapes">
-                        <img class="mockup" width="500px" src="./assets/images/mockups/weather_mockup.webp" alt="mockup">
+                        <img class="mockup" width="500px" src="./assets/images/mockups/weather_mockup.webp"
+                            alt="mockup">
                         <div>
                             <p>Aplicação que consulta uma <b>API</b> para obter o clima em tempo real de qualquer
                                 cidade digitada pelo usuário. A interface é limpa e responsiva,
                                 proporcionando uma maneira
-                                rápida e eficiente de obter informações meteorológicas atualizadas. Utilizei <b>HTML, CSS e JavaScript</b></p>
+                                rápida e eficiente de obter informações meteorológicas atualizadas. Utilizei <b>HTML,
+                                    CSS e JavaScript</b></p>
 
                             <div class="container-btn">
                                 <a target="_blank" href="https://beatrizcdsmartins.github.io/How-is-the-weather/">Deploy
@@ -307,7 +346,7 @@
     <section id="contato" class="contact">
         <div class="container-contact">
             <div>
-                <div class="container-title"  data-aos="fade-right">
+                <div class="container-title" data-aos="fade-right">
                     <span>Entre em</span>
                     <h1>Contato</h1>
                 </div>
@@ -325,16 +364,17 @@
                 </div>
 
             </div>
-            <div class="social-medias" >
-                <div  data-aos="fade-right"><a target="_blank" href="https://github.com/beatrizcdsmartins/"><img
+            <div class="social-medias">
+                <div data-aos="fade-right"><a target="_blank" href="https://github.com/beatrizcdsmartins/"><img
                             src="./assets/icons/github.svg" alt="github"></a>
                     <p>/beatrizcdsmartins</p>
                 </div>
-                <div  data-aos="fade-right"><a target="_blank" href="https://www.linkedin.com/in/beatriz-cardoso-martins/"><img
+                <div data-aos="fade-right"><a target="_blank"
+                        href="https://www.linkedin.com/in/beatriz-cardoso-martins/"><img
                             src="./assets/icons/linkedIn.svg" alt="linkedIn"></a>
                     <p>/beatriz-cardoso-martins</p>
                 </div>
-                <div  data-aos="fade-right"><a target="_blank" href="mailto:beatrizcdsmartins.contato@gmail.com"><img
+                <div data-aos="fade-right"><a target="_blank" href="mailto:beatrizcdsmartins.contato@gmail.com"><img
                             src="./assets/icons/e-mail.svg" alt="email"></a>
                     <p>beatrizcdsmartins.contato@gmail.com</p>
                 </div>
@@ -342,7 +382,8 @@
 
 
             <div class="social-medias-mobile">
-                <div><a href="https://github.com/beatrizcdsmartins/"><img src="./assets/icons/github.svg" alt="github"></a>
+                <div><a href="https://github.com/beatrizcdsmartins/"><img src="./assets/icons/github.svg"
+                            alt="github"></a>
                 </div>
                 <div><a href="https://www.linkedin.com/in/beatriz-cardoso-martins/"><img
                             src="./assets/icons/linkedIn.svg" alt="linkedIn"></a></div>
@@ -365,5 +406,6 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init();
-  </script>
+</script>
+
 </html>

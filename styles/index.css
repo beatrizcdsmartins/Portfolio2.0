@@ -52,7 +52,9 @@ a:hover {
   transform: scale(1.1);
 }
 
-.linkedin, .github, .eye {
+.linkedin,
+.github,
+.eye {
   background-color: white;
   padding: 7px;
   border-radius: 10px;
@@ -791,7 +793,8 @@ footer .development {
   nav a {
     color: #060A2F;
   }
-  .github, .eye {
+  .github,
+  .eye {
     padding: 2px;
     border-radius: 20px;
   }
